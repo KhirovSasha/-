@@ -1,0 +1,61 @@
+6. Запуск контейнера: docker run hello-world
+   Результат контейнера:	Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+ 
+6.1 Команда для перевірки версії: docker images hello-world
+	Результат: REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+				hello-world   latest    feb5d9fea6a5   17 months ago   13.3kB
+				
+8. docker exec -it khiro bash
+
+bash-4.4$ whoami
+download
+
+bash-4.4$ cd /
+bash-4.4$ ls
+bin    dev    etc    home   lib    media  mnt    proc   root   run    sbin   srv    sys    tmp    usr    var
+
+bash-4.4$ git --version
+git version 2.18.1
+
+9. Скачуємо репозиторій в home/download/
+bash-4.4$ cd /home/download/
+bash-4.4$ git clone https://github.com/KhirovSasha/Theory-of-computer-systems-and-their-design-methodology.git
+Cloning into 'Theory-of-computer-systems-and-their-design-methodology'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 7 (delta 0), reused 7 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+
+bash-4.4$ ls
+Theory-of-computer-systems-and-their-design-methodology
+
+10. bash-4.4$ exit
+exit
+
+docker exec -it khiro bash
+
+bash-4.4$ ls
+Theory-of-computer-systems-and-their-design-methodology
+
+bash-4.4$ realpath Theory-of-computer-systems-and-their-design-methodology/
+/home/download/Theory-of-computer-systems-and-their-design-methodology
