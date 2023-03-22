@@ -1,7 +1,18 @@
 <?php
 
-$file = fopen("/app/app.py", "r");
+require_once 'vendor/autoload.php'; 
 
-print_r(fgets($file));
+$phpWord = \PhpOffice\PhpWord\IOFactory::load('example.docx');
 
-fclose($file);
+$elements = $phpWord->getSections()[0]->getElements();
+
+foreach ($elements as $element) {
+    if ($element instanceof \PhpOffice\PhpWord\Element\TextRun) {
+        foreach ($element->getElements() as $text) {
+            if ($text instanceof \PhpOffice\PhpWord\Element\Text) {
+                echo $text->getText() . " ";
+            }
+        }
+        echo PHP_EOL;
+    }
+}
