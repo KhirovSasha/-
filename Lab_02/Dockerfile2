@@ -1,0 +1,13 @@
+# Встанолюємо базове зображення для PHP
+FROM php:8.1-cli
+
+# Встановити робочий каталог
+WORKDIR /app
+
+# Копіюємо файли
+COPY index.php /app/
+
+COPY app.py /app/
+
+# Запускаємо
+CMD ["php", "index.php"]
