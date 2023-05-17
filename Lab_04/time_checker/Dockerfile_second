@@ -1,0 +1,7 @@
+FROM python:latest
+
+WORKDIR /app
+
+COPY service2.py /app
+
+CMD ["python", "service2.py"]

@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 111
+      MYSQL_DATABASE: db
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: 111
+    ports:
+      - "8080:80"
+
+volumes:
+ data:

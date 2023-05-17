@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  first_progra:
+    build:
+      context: .
+      dockerfile: Dockerfile_first
+    volumes:
+      - ./time:/app/time
+
+  second_progra:
+    build:
+      context: .
+      dockerfile: Dockerfile_second
+    volumes:
+      - ./time:/app/time
