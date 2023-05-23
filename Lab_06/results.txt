@@ -1,0 +1,11 @@
+C:\Users\rabot>docker pull google/cadvisor
+Using default tag: latest
+latest: Pulling from google/cadvisor
+ff3a5c916c92: Pull complete
+44a45bb65cdf: Pull complete
+0bbe1a2fe2a6: Pull complete
+Digest: sha256:815386ebbe9a3490f38785ab11bda34ec8dacf4634af77b8912832d4f85dca04
+Status: Downloaded newer image for google/cadvisor:latest
+docker.io/google/cadvisor:latest
+
+C:\Users\rabot>
